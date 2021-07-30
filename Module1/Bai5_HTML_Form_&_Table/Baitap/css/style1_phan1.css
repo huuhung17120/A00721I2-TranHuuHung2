@@ -1,0 +1,18 @@
+body{
+    margin:0%
+}
+form{
+    margin-right: 30%;
+    margin-left: 30%;
+    border-collapse: collapse;
+
+}
+h3{
+    background-color: orangered;
+    color: white;
+    text-align: center;
+}
+label{
+    color: blue;
+}
+
