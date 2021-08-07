@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu giữ liệu và toán tử</title>
+</head>
+<body>
+<script>
+    let inputdiemVatLy;
+    let inputdiemHoaHoc;
+    let inputdiemSinhHoc;
+
+    inputdiemVatLy = prompt("Nhập điểm Vật Lý: ");
+    inputdiemHoaHoc = prompt("Nhập điểm Hóa HỌc: ");
+    inputdiemSinhHoc = prompt("Nhập điểm Sinh Học: ");
+
+    let diemVatLy = parseFloat(inputdiemVatLy);
+    let diemHoaHoc = parseFloat(inputdiemHoaHoc);
+    let diemSinhHoc = parseFloat(inputdiemSinhHoc);
+
+    let sum = (diemVatLy + diemHoaHoc + diemSinhHoc);
+    let avg = sum / 3;
+
+    document.writeln("The average is: " + avg);
+    document.write("The sum is: " + sum);
+</script>
+</body>
+</html>
