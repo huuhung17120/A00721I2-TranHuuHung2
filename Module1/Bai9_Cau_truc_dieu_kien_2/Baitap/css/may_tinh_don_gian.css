@@ -1,0 +1,15 @@
+body {
+    width: 50%;
+    margin: auto;
+    border-collapse: collapse;
+}
+
+.btn {
+    width: 35px;
+    height: 35px;
+    color: blue;
+}
+
+table {
+    border: black 6px solid;
+}
