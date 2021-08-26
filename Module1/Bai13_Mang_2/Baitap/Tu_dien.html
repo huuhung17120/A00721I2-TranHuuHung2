@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<input type="text" id="txt-timkiem">
+<input type="button" onclick="timkiem()" value="Tìm kiếm">
+<div id="result"></div>
+<script>
+    let eng = ["apple", "banana", "grape", "pineapple"];
+    let viet = ["táo", "chuối", "nho", "dứa"];
+
+    function timkiem() {
+        let getRequest = document.getElementById("txt-timkiem").value;
+        let getPosition = eng.indexOf(getRequest);
+        document.getElementById("result").innerHTML = viet[getPosition];
+    }
+</script>
+</body>
+</html>
