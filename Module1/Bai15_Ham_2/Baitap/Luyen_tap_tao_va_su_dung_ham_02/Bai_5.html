@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    x = parseFloat(prompt('Nhập số 1: '));
+    y = parseFloat(prompt('Nhập số 2: '));
+    z = parseFloat(prompt('Nhập số 3: '));
+
+    function min(x, y, z) {
+        if (x < y) {
+            if (x < z) {
+                return x;
+            } else {
+                return z;
+            }
+        } else {
+            if (y < z) {
+                return y;
+            } else {
+                return z;
+            }
+        }
+    }
+
+    alert(min(x, y, z));
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="chuoikytu">
+<input type="text" id="kytu">
+<button onclick="check()">Kiểm tra</button>
+<p id="output"></p>
+<script>
+    function check() {
+        var chuoi = document.getElementById('chuoikytu').value;
+        var kytu = document.getElementById('kytu').value;
+        let dem = 0;
+        for (var i = 0; i < chuoi.length; i++) {
+            if (chuoi[i] === kytu) {
+                dem++;
+            }
+        }
+        if (dem !== 0) {
+            document.getElementById('output').innerHTML= dem;
+        } else return document.getElementById('output').innerHTML= -1;
+    }
+
+</script>
+</body>
+</html>

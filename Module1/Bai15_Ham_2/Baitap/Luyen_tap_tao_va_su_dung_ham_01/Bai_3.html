@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <th>Số Thứ 1</th>
+        <th>Số Thứ 2</th>
+    </tr>
+    <tr>
+        <td><input type="text" id="input1"></td>
+        <td><input type="text" id="input2"></td>
+    </tr>
+</table>
+<input type="button" onclick="compare()" value="Kiểm tra">
+<p id="output"></p>
+<script>
+
+
+    function compare() {
+        let input1 = document.getElementById('input1').value;
+        let num1 = eval(input1);
+        let input2 = document.getElementById('input2').value;
+        let num2 = eval(input2);
+        if (num1 > num2) {
+            alert('Số 1 lớn hơn số 2');
+        }
+        if (num1 < num2) {
+            document.getElementById('output').innerHTML = num1 + num2;
+        }
+    }
+</script>
+</body>
+</html>

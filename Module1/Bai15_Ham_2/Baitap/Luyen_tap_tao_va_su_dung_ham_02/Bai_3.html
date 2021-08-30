@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = parseInt(prompt('Nhập số: '));
+
+    function factorial(num) {
+        let tmp = 1;
+        for (i = 1; i <= num; i++) {
+            tmp *= i;
+        }
+        return tmp;
+    }
+
+    alert('Giai thừa của ' + num + ' là: ' + factorial(num));
+</script>
+</body>
+</html>

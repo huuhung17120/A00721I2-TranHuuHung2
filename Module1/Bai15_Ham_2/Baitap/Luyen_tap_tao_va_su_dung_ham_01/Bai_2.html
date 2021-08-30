@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="input">
+<input type="button" onclick="argument()" value="Tăng">
+<p id="output"></p>
+<script>
+    function argument() {
+        let input = document.getElementById('input').value;
+        let num = eval(input);
+        document.getElementById('output').innerHTML = num + 1;
+    }
+</script>
+</body>
+</html>

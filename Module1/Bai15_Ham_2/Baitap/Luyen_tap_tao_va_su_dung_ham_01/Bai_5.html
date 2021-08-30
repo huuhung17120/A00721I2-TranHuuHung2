@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe","Regulus"];
+    var constellations = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+    function checkStar(star){
+        return  index = stars.indexOf(star);
+    }
+    do{
+    var starname = prompt('Nhập tên sao');
+
+        alert(constellations[checkStar(starname)])
+
+    }while(!checkStar(starname));
+</script>
+</body>
+</html>
