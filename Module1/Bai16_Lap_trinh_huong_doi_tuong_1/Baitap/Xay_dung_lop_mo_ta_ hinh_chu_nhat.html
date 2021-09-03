@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<input type="text" id="chieudai" placeholder="Nhập chiều dài">
+<input type="text" id="chieurong" placeholder="Nhập chiều rộng">
+<button onclick="tinhCV()">Tính chu vi</button>
+<button onclick="tinhDT()">Tính diện tích</button>
+<p id="ketqua"></p>
+<script>
+    class Rectangle {
+        constructor(dai, rong) {
+            this.dai = dai;
+            this.rong = rong;
+        }
+
+        getArea() {
+            return this.dai * this.rong;
+        }
+
+        getPerimeter() {
+            return 2 * (this.dai + this.rong);
+        }
+    }
+
+    let rectangle = new Rectangle(2, 3);
+
+
+    function tinhCV() {
+
+        let txtchieudai = document.getElementById('chieudai').value;
+        let chieudai = eval(txtchieudai);
+        let txtchieurong = document.getElementById('chieurong').value;
+        let chieurong = eval(txtchieurong);
+        let rectangle = new Rectangle(chieudai, chieurong);
+        let perimeter = rectangle.getPerimeter();
+        document.getElementById('ketqua').innerHTML = 'Chu vi là:' + perimeter;
+
+    }
+
+    function tinhDT() {
+
+        let txtchieudai = document.getElementById('chieudai').value;
+        let chieudai = eval(txtchieudai);
+        let txtchieurong = document.getElementById('chieurong').value;
+        let chieurong = eval(txtchieurong);
+        let rectangle = new Rectangle(chieudai, chieurong);
+        let area = rectangle.getArea();
+        document.getElementById('ketqua').innerHTML = 'Diện tích là:' + area;
+    }
+</script>
+</body>
+</html>
