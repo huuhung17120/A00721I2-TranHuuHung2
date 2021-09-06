@@ -2,9 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Xây dựng lớp mô tả Temperature</title>
 </head>
 <body>
+<script>
+    class Temperature {
 
+        constructor(C) {
+            this.C = C;
+        }
+
+        getF() {
+            return 1.8 * this.C + 32;
+        }
+
+        getKevin() {
+            return this.C + 273.15;
+        }
+    }
+
+    let temperature = new Temperature(25);
+    let F = temperature.getF();
+
+    let K = temperature.getKevin();
+    alert('Độ F là: ' + F);
+    alert('Độ Kevin là: ' + K);
+</script>
 </body>
 </html>
