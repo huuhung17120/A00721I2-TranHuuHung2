@@ -13,39 +13,86 @@
 
         Decrease() {
             if (this.weight > 0) {
-                this.weight--;
+                this.weight = this.weight - 1;
             }
         }
 
         isEmty() {
             if (this.weight > 0) {
                 return true;
-            } else {
-                return false;
-            }
+            } else return false;
         }
 
         getWeight() {
             return this.weight;
         }
-    };
+    }
 
     class Human {
-        constructor() {
-            this.name = "";
-            this.gender = true;
-            this.weight;
+        constructor(weight, gender, name) {
+            this.name = name;
+            this.weight = weight;
+            this.gender = gender;
         }
 
         isMale() {
             if (this.gender) {
-                return true;
+                return "Nam";
             } else {
-                return false;
+                return "Nữ";
             }
         }
-        
+
+        setGender(gender) {
+            this.gender = gender;
+        }
+
+        checkApple(Apple) {
+            console.log("Kiểm tra khối lượng táo còn lại: " + Apple.getWeight());
+        }
+
+        eat(apple) {
+            if (apple.isEmty()) {
+                console.log("Đã ăn 1 đv táo.");
+                //return day roi thi sao no chay xuong duoi dc :v
+                apple.Decrease();
+                this.weight = this.weight + 1;
+            } else {
+                console.log("Táo không đủ khối lượng");
+            }
+        }
+
+        setWeight(weight) {
+            this.weight = weight;
+        }
+
+        getWeight() {
+            return this.weight;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+        say(String){
+            console.log(String);
+        }
     };
+
+    let apple = new Apple();
+    let adam = new Human();
+    adam.setName('Adam');
+    adam.setGender(true);
+    adam.setWeight(50);
+    adam.say("Xin chào tôi là Adam");
+    console.log("Tên: " + adam.getName() + " Giới tính: " + adam.isMale() + " Cân nậng: " + adam.getWeight());
+    adam.eat(apple);
+    console.log("Tên: " + adam.getName() + " Giới tính: " + adam.isMale() + " Cân nậng: " + adam.getWeight());
+    adam.checkApple(apple);
+
 </script>
 </body>
 </html>
