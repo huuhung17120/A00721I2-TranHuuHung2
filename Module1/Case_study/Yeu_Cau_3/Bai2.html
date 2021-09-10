@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let A = [7, 2, 5, 3, 5, 3];
+    let B = [7, 2, 5, 4, 6, 3, 5, 3];
+    let missingValue = new Array();
+
+    for (let i = 0; i < B.length; i++) {
+        let dem = 0;
+        for (let j = 0; j < A.length; j++) {
+            if (B[i] == A[j]) {
+                dem++;
+            }
+        }
+        if (dem == 0) {
+            missingValue[i] = B[i];
+        }
+    }
+    console.log(missingValue);
+</script>
+</body>
+</html>

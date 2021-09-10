@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="salary">
+<button onclick="calSalary()">Tính</button>
+<h3 id="result"></h3>
+<script>
+
+    function calSalary() {
+        let inputsalary = document.getElementById('salary').value;
+        let salary = eval(inputsalary);
+        let realsalary;
+        if (salary >= 15000000) {
+            realsalary = salary - salary * 20 / 100;
+        } else if (salary <= 7000000 || salary < 15000000) {
+            realsalary = salary - salary * 10 / 100;
+        } else if (salary < 7000000) {
+            realsalary = salary - salary * 5 / 100;
+        }
+        document.getElementById('result').innerHTML = "Lương thực tế là " + realsalary;
+    }
+</script>
+</body>
+</html>
