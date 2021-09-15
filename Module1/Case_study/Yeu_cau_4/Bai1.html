@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let str = prompt('Nhâp chuỗi ký tự: ');
+
+    function Chuanhoa(str) {
+        arr = str.split(" ");
+        let i, kq = "", tmp;
+        for (i = 0; i < arr.length; i++) {
+            tmp = arr[i].trim().toLowerCase();
+            if (tmp != "") {
+                tmp = tmp.substr(0, 1).toUpperCase() + tmp.substr(1);
+                kq += tmp + " ";
+            }
+        }
+        alert('Chuỗi ký tự sau khi chuyển hóa: ' + kq.trim());
+        let maxLength = 0;
+        let wordtmp;
+        for (let i = 0; i < arr.length; i++) {
+            if (arr[i].length > maxLength) {
+                maxLength = arr[i].length;
+                wordtmp = arr[i];
+            }
+        }
+        wordtmp = wordtmp.toLowerCase();
+        if (wordtmp != "") {
+            wordtmp = wordtmp.substr(0, 1).toUpperCase() + wordtmp.substr(1);
+        }
+        alert('Từ dài nhất có trong chuỗi: ' + wordtmp.trim());
+
+    }
+
+    Chuanhoa(str);
+</script>
+</body>
+</html>

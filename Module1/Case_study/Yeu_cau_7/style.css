@@ -1,0 +1,69 @@
+body {
+  width: 100%;
+  height: 100%;
+}
+.main {
+  width: 100%;
+}
+.header p {
+  text-align: center;
+  font-size: 23px;
+}
+.header {
+  width: 100%;
+  height: 150px;
+  background-color: gray;
+  float: left;
+}
+.header i,
+input {
+  margin: 10px 25px;
+  font-size: 20px;
+}
+.http {
+  width: 600px;
+  border-radius: 7%;
+}
+.header .fa-search {
+  background-color: white;
+  margin-left: 100px;
+  width: 70px;
+  height: 26px;
+  font-size: 22px;
+  border-radius: 50px;
+}
+
+.title {
+  border-bottom: 1px gray solid;
+}
+.title i {
+  font-size: 30px;
+  margin-left: 50px;
+}
+.title p {
+  text-align: center;
+  margin-top: -20px;
+}
+.content {
+  width: 100%;
+  height: 500px;
+}
+.left {
+  width: 69%;
+  height: 500px;
+  float: left;
+}
+.left select {
+  display: block;
+  padding: 10px 20px;
+  margin: 50px 100px;
+}
+.right {
+  width: 29%;
+  height: 500px;
+  border-right: 1px gray solid;
+}
+.footer {
+  background-color: gray;
+  height: 30px;
+}

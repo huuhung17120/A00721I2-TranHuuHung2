@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<table>
+    <tr>
+        <td>Chuỗi ký tự:</td>
+        <td><input type="text" id="txt-str"></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <button onclick="differentSymbolsNaive()">Đếm</button>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td><p id="kq"></p></td>
+    </tr>
+</table>
+<script>
+    function differentSymbolsNaive() {
+        var s = document.getElementById("txt-str").value;
+        var str = s.toLowerCase();
+        var i = 0;
+        var arrkq = [];
+        for (i = 0; i <= 128; i++) {
+            arrkq[i] = 0;
+        }
+        kq = "Các ký tự có trong chuỗi: ";
+        for (i = 0; i < str.length; i++) {
+            if (s.charCodeAt(1) >= 'a' && s.charCodeAt(i) <= 'z')
+                arrkq[str.charCodeAt(i)]++;
+            else arrkq[str.charCodeAt(i)]++;
+        }
+        for (i = 0; i < arrkq.length; i++) {
+            if (arrkq[i] > 0)
+                kq += arrkq[i] + " ký tự '" + String.fromCharCode(i) + "', ";
+        }
+
+        document.getElementById("kq").textContent = kq;
+    }
+</script>
+</body>
+</html>

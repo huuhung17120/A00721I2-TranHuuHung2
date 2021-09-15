@@ -5,15 +5,42 @@
     <title>Bài 1</title>
 </head>
 <body>
-<script>
-    let a = [1, 2, 3]
-    let b = new Array();
-    let m = 0;
-    for (let i = 0; i < a.length; i++) {
-        m += a[i];
-        b[i] = m;
-    }
-    console.log(b);
-</script>
+
 </body>
+<script>
+    let a = [1, 2, 3, 7, 9, 10];
+    let b = [];
+    let resultA = `Chuỗi A = `;
+    let resultB = `Kết quả chuỗi B = `;
+    let check = 0;
+    for (let i = 0; i < a.length; i++){
+        if (isNaN(a[i])){
+            check ++;
+            break;
+        }
+        resultA += `${a[i]} `
+        for (let j = 0; j <= i; j++){
+            if (isNaN(a[i])){
+                check ++;
+                break;
+            }
+            if (j == 0){
+                b[i] = a[j];
+            } else {
+                b[i] += a[j];
+            }
+        }
+        if (check >0){
+            break;
+        }
+        resultB += `${b[i]} `
+    }
+    if (check >0){
+        alert(`Vui lòng nhập số!!!`);
+    } else {
+        let result = `${resultA}. ${resultB}`;
+        alert(result);
+        console.log(b);
+    }
+</script>
 </html>

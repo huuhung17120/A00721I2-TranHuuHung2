@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 2</title>
+</head>
+<body>
+<script>
+    let m, n;
+    do {
+        m = parseInt(prompt("Nhâp m:"));
+    }
+    while (isNaN(m));
+    do {
+        n = parseInt(prompt("Nhâp n:"));
+    }
+    while (isNaN(n));
+    let a = new Array();
+    for (let i = 0; i < m; i++) {
+        a[i] = new Array();
+        for (let j = 0; j < n; j++) {
+            a[i][j] = parseInt(prompt("Nhập phần tử [" + i + "][" + j + "]: "));
+            console.log(a[i][j]);
+        }
+    }
+
+    function isPrime(n) {
+        if (n < 2) {
+            return false;
+        }
+        for (let i = 2; i < (n - 1); i++) {
+            if (n % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    function inSnt(a) {
+        let dem = 0;
+        document.write("Các số nguyên tố trong mảng: ");
+        for (i = 0; i < a.length; i++) {
+            for (j = 0; j < a[i].length; j++) {
+                if (!isNaN(a[i][j])) {
+                    if (isPrime(a[i][j])) {
+                        document.write(" " + a[i][j]);
+                        dem++;
+                    }
+                }
+
+            }
+        }
+        document.write("<br>" + "Số lượng số nguyên tố: " + dem);
+
+    }
+
+    inSnt(a);
+</script>
+</body>
+</html>

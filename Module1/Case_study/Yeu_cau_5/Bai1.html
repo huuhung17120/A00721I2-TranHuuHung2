@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 1</title>
+</head>
+<body>
+<script>
+    let m, n;
+    do {
+        m = parseInt(prompt("Nhâp m:"));
+    }
+    while (isNaN(m));
+    do {
+        n = parseInt(prompt("Nhâp n:"));
+    }
+    while (isNaN(n));
+    let a = new Array();
+    let sum = 0;
+    for (let i = 0; i < m; i++) {
+        a[i] = new Array();
+        for (let j = 0; j < n; j++) {
+            a[i][j] = parseInt(prompt("Nhập phần tử [" + i + "][" + j + "]: "));
+            console.log(a[i][j]);
+        }
+    }
+
+    function tongSoChan(a) {
+        for (let i = 0; i < m; i++) {
+            for (let j = 0; j < n; j++) {
+                if (a[i][j] % 2 === 0) {
+                    sum += a[i][j];
+                }
+            }
+        }
+        alert('Tổng các phần tử chẳng trong ma trận: ' + sum);
+    }
+    tongSoChan(a);
+</script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bài 5</title>
+</head>
+<body>
+<script>
+    let so;
+    do {
+        so = prompt('loại thức uống bạn muốn chọn 1 (cafe), 2 (cam vắt), 3(nước ép cà rốt), 4(nước ép cà chua), 5(nước lọc), 6(nước dừa), 7(thoát gọi món): ');
+        switch (so) {
+            case '1':
+                gia = 20000;
+                soluong = prompt('cafe có giá 20.000, mời bạn nhập số lượng: ');
+                alert('Số tiền bạn phải trả là: '+ soluong*gia);
+                break;
+            case '2':
+                gia = 21000;
+                soluong = prompt('cam vắt có giá 21.000, mời bạn nhập số lượng: ');
+                alert('Số tiền bạn phải trả là: '+ soluong*gia);
+                break;
+            case '3':
+                gia = 22000;
+                soluong = prompt('nước ép cà rốt có giá 22.000, mời bạn nhập số lượng: ');
+                alert('Số tiền bạn phải trả là: '+ soluong*gia);
+                break;
+            case '4':
+                gia = 25000;
+                soluong = prompt('nước ép cà chua có giá 25.000, mời bạn nhập số lượng: ');
+                alert('Số tiền bạn phải trả là: '+ soluong*gia);
+                break;
+            case '5':
+                gia = 7000;
+                soluong = prompt('nước lọc có giá 7.000, mời bạn nhập số lượng: ');
+                alert('Số tiền bạn phải trả là: '+ soluong*gia);
+                break;
+            case '6':
+                gia = 18000;
+                soluong = prompt('nước dừa có giá 18.000, mời bạn nhập số lượng: ');
+                alert('Số tiền bạn phải trả là: '+ soluong*gia);
+                break;
+            case '7':
+                alert("Thoát gọi món ");
+                break;
+        }
+    } while (so !== '7');
+</script>
+</body>
+</html>

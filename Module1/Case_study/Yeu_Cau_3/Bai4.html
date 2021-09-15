@@ -6,50 +6,44 @@
 </head>
 <body>
 <script>
-    let so = parseInt(prompt("Nhập dãy số: "));
-    while (so != 0) {
+    let so = prompt("Nhập dãy số: ");
+    let i = 0;
 
-        let soTemp = (soTemp * 10) + (so % 10);
-        so /= 10;
-    }
-
-    while (soTemp != 0) {
-        switch (soTemp % 10) {
-            case 0:
-                console.log("Không ");
+    while (i<so.length) {
+        switch (so[i]) {
+            case '0':
+                document.write("Không ");
                 break;
-            case 1:
-                console.log("Một ");
+            case '1':
+                document.write("Một ");
                 break;
-            case 2:
-                console.log("Hai ");
+            case '2':
+                document.write("Hai ");
                 break;
-            case 3:
-                console.log("Ba ");
+            case '3':
+                document.write("Ba ");
                 break;
-            case 4:
-                console.log("Bốn ");
+            case '4':
+                document.write("Bốn ");
                 break;
-            case 5:
-                console.log("Năm ");
+            case '5':
+                document.write("Năm ");
                 break;
-            case 6:
-                console.log("Sáu ");
+            case '6':
+                document.write("Sáu ");
                 break;
-            case 7:
-                console.log("Bảy ");
+            case '7':
+                document.write("Bảy ");
                 break;
-            case 8:
-                console.log("Tám ");
+            case '8':
+                document.write("Tám ");
                 break;
-            case 9:
-                console.log("Chín ");
+            case '9':
+                document.write("Chín ");
                 break;
         }
-
-        soTemp = soTemp / 10;
+        i++;
     }
-
 </script>
 </body>
 </html>
