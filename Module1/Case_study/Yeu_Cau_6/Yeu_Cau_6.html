@@ -3,14 +3,93 @@
 <head>
     <meta charset="UTF-8">
     <title>Ứng dụng vé số</title>
+
+    <style>
+
+        td, th {
+            margin: auto;
+        }
+
+        button {
+            margin: 20px 0px 0px 0px;
+        }
+    </style>
 </head>
 <body>
 <table>
-    <th>Xổ số CodeGym</th>
-    <tr><input type="text"></tr>
-</table>
-<script>
+    <h3>Xỗ số CodeGym</h3>
+    <tr>
+        <td><input type="text" size="10" id="so1"></td>
+        <td><input type="text" size="10" id="so2"></td>
+        <td><input type="text" size="10" id="so3"></td>
+        <td><input type="text" size="10" id="so4"></td>
+        <td><input type="text" size="10" id="so5"></td>
+        <td><input type="text" size="10" id="so6"></td>
+    </tr>
+    <tr>
+        <td><input type="text" size="10" id="kq1"></td>
+        <td><input type="text" size="10" id="kq2"></td>
+        <td><input type="text" size="10" id="kq3"></td>
+        <td><input type="text" size="10" id="kq4"></td>
+        <td><input type="text" size="10" id="kq5"></td>
+        <td><input type="text" size="10" id="kq6"></td>
+    </tr>
 
+</table>
+<button onclick="MuaVe()">Mua Vé</button>
+<button onclick="XemKetQua()">Xem Kết Quả</button>
+<script>
+    class XoSO {
+        constructor(so1, so2, so3, so4, so5, so6) {
+            this.so1 = so1;
+            this.so2 = so2;
+            this.so3 = so3;
+            this.so4 = so4;
+            this.so5 = so5;
+            this.so6 = so6;
+        }
+    }
+
+
+    let veso;
+
+    function MuaVe() {
+        let luachon;
+
+        do {
+            luachon = parseInt(prompt("Bạn có 2 lựa chon \n1.Bạn muốn tự chọn số.\n2. Hệ thống tự random."));
+        }
+        while (luachon !== 1 && luachon !== 2);
+        if (luachon == 1) {
+            so1 = eval(document.getElementById('so1').value);
+            so2 = eval(document.getElementById('so2').value);
+            so3 = eval(document.getElementById('so3').value);
+            so4 = eval(document.getElementById('so4').value);
+            so5 = eval(document.getElementById('so5').value);
+            so6 = eval(document.getElementById('so6').value);
+        } else {
+            so1 = Math.floor(Math.random() * 100) + 1;
+            so2 = Math.floor(Math.random() * 100) + 1;
+            so3 = Math.floor(Math.random() * 100) + 1;
+            so4 = Math.floor(Math.random() * 100) + 1;
+            so5 = Math.floor(Math.random() * 100) + 1;
+            so6 = Math.floor(Math.random() * 100) + 1;
+        }
+        veso = new XoSO(so1, so2, so3, so4, so5, so6);
+    }
+
+    function XemKetQua() {
+        kq1 = Math.floor(Math.random() * 100) + 1;
+        kq2 = Math.floor(Math.random() * 100) + 1;
+        kq3 = Math.floor(Math.random() * 100) + 1;
+        kq4 = Math.floor(Math.random() * 100) + 1;
+        kq5 = Math.floor(Math.random() * 100) + 1;
+        kq6 = Math.floor(Math.random() * 100) + 1;
+        document.getElementById('kq1').innerText = kq1;
+        if (so1 == kq1) {
+            alert('chúc mừng');
+        }
+    }
 </script>
 </body>
 </html>
