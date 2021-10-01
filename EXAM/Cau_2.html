@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<input type="text" id="txt-so1">
+<input type="text" id="txt-so2">
+<button onclick="kiemtra()">Kiểm tra</button>
+<p id="ketqua"></p>
+<script>
+    function timUoc(n) {
+        let tmp = 0;
+        for (let i = 0; i < n; i++) {
+            if (n % i === 0) {
+                tmp += i;
+            }
+        }
+        return tmp;
+    }
+
+    function kiemtra() {
+        let str1 = document.getElementById('txt-so1').value;
+        let str2 = document.getElementById('txt-so2').value;
+        let so1 = eval(str1);
+        let so2 = eval(str2);
+        if (so1 === timUoc(so2) && so2 === timUoc(so1)) {
+            document.getElementById('ketqua').innerHTML = "Hai số " + so1 + " và " + so2 + " là số thân thiết.";
+        } else document.getElementById('ketqua').innerHTML = "Hai số " + so1 + " và " + so2 + " không phải là số thân thiết.";
+    }
+</script>
+</body>
+</html>

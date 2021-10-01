@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 1</title>
+</head>
+
+<body>
+<h3>Hiển thị ra màn hình trung bình cộng các số lẻ ở vị trí chẵn.</h3>
+<input type="text" id="txt-mang">
+<button onclick="tinh()">Tính</button>
+<p id="ketqua"></p>
+<script>
+    function tinh() {
+        let str = document.getElementById('txt-mang').value;
+        let arr = str.split(" ").map(Number);
+        let tmp = 0, dem = 0;
+        let i = 0;
+        kq = "Trung bình cộng của: (" + arr[0];
+        if (arr.length > 50) {
+            alert("Vui lòng nhập ít hơn 50 phần tử");
+        } else {
+            for (; i < arr.length; i++) {
+                if (i % 2 === 0) {
+                    if (!isNaN(arr[i])) {
+                        if (arr[i] % 2 !== 0) {
+                            dem++;
+                            tmp += arr[i];
+                            if (i !== 0) {
+                                kq += "+" + arr[i];
+                            }
+                        }
+                    }
+                }
+            }
+            document.getElementById('ketqua').innerHTML = kq + ")/" + dem + "=" + tmp / dem;
+        }
+    }
+</script>
+</body>
+</html>

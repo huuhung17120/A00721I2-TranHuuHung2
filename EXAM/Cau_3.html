@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bai 3</title>
+</head>
+<body>
+
+<div>
+    <h3 style="text-align: center" Quản lý sách</h3>
+    <div id="QlSach"></div>
+    <button onclick="themSachDaCo()">Thêm sách đã có</button>
+    <button onclick="themSachMoi()">Thêm sách mới</button>
+    <button onclick="muonSach()">Mượn sách</button>
+    <button onclick="hienThi()">Hiển thị sách nhiều nhất</button>
+</div>
+<script>
+    class QLSach {
+        setMaSo(masosach) {
+            this.masosach = masosach;
+        }
+
+        getMaSO() {
+            return this.masosach;
+        }
+
+        setTenSach(tensach) {
+            this.tensach = tensach;
+        }
+
+        getTenSach() {
+            return this.tensach;
+        }
+
+        setNamXuatBan(namxuatban) {
+            this.namxuatban = namxuatban;
+        }
+
+        getNamXuatBan() {
+            return this.namxuatban;
+        }
+
+        setSoQuyen(soquyen) {
+            this.soquyen = soquyen;
+        }
+
+        getSoQuyen() {
+            return this.soquyen;
+        }
+
+        setTinhTrang(tinhtrang) {
+            this.tinhtrang = tinhtrang;
+        }
+
+        getTinhTrang() {
+            return this.tinhtrang;
+        }
+    }
+
+    let sach = new QLSach();
+    sach.setMaSo('12345');
+    sach.setTenSach('Toán');
+    sach.setNamXuatBan(2021);
+    sach.setSoQuyen(20);
+    sach.setTinhTrang(true);
+    let ketQua = "";
+    ketQua += "<table id='QlSach'><th>Mã số sách</th><th>Tên sách</th><th>Năm xuất bản</th><th>Số quyển</th><th>Tình trạng</th>"
+
+    ketQua += "<tr><td>" + sach.getMaSO() + "</td><td>" + sach.getTenSach() + "</td><td>" + sach.getNamXuatBan() + "</td><td>" + sach.getSoQuyen() + "</td><td>" + sach.getTinhTrang() + "</td></tr>";
+
+    ketQua += "</table>";
+    document.getElementById("QlSach").innerHTML = ketQua;
+</script>
+</body>
+</html>

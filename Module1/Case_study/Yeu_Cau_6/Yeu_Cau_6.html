@@ -55,9 +55,10 @@
 
     function MuaVe() {
         let luachon;
-
+        let so1, so2, so3, so4, so5, so6;
         do {
             luachon = parseInt(prompt("Bạn có 2 lựa chon \n1.Bạn muốn tự chọn số.\n2. Hệ thống tự random."));
+
         }
         while (luachon !== 1 && luachon !== 2);
         if (luachon == 1) {
@@ -68,27 +69,58 @@
             so5 = eval(document.getElementById('so5').value);
             so6 = eval(document.getElementById('so6').value);
         } else {
-            so1 = Math.floor(Math.random() * 100) + 1;
-            so2 = Math.floor(Math.random() * 100) + 1;
-            so3 = Math.floor(Math.random() * 100) + 1;
-            so4 = Math.floor(Math.random() * 100) + 1;
-            so5 = Math.floor(Math.random() * 100) + 1;
-            so6 = Math.floor(Math.random() * 100) + 1;
+            so1 = Math.floor(Math.random() * 100);
+            so2 = Math.floor(Math.random() * 100);
+            so3 = Math.floor(Math.random() * 100);
+            so4 = Math.floor(Math.random() * 100);
+            so5 = Math.floor(Math.random() * 100);
+            so6 = Math.floor(Math.random() * 100);
+            document.getElementById('so1').value = so1;
+            document.getElementById('so2').value = so2;
+            document.getElementById('so3').value = so3;
+            document.getElementById('so4').value = so4;
+            document.getElementById('so5').value = so5;
+            document.getElementById('so6').value = so6;
         }
         veso = new XoSO(so1, so2, so3, so4, so5, so6);
     }
 
     function XemKetQua() {
-        kq1 = Math.floor(Math.random() * 100) + 1;
-        kq2 = Math.floor(Math.random() * 100) + 1;
-        kq3 = Math.floor(Math.random() * 100) + 1;
-        kq4 = Math.floor(Math.random() * 100) + 1;
-        kq5 = Math.floor(Math.random() * 100) + 1;
-        kq6 = Math.floor(Math.random() * 100) + 1;
-        document.getElementById('kq1').innerText = kq1;
-        if (so1 == kq1) {
-            alert('chúc mừng');
+
+        let kq1 = String(Math.floor(Math.random() * 100) + 1);
+        let kq2 = String(Math.floor(Math.random() * 100) + 1);
+        let kq3 = String(Math.floor(Math.random() * 100) + 1);
+        let kq4 = String(Math.floor(Math.random() * 100) + 1);
+        let kq5 = String(Math.floor(Math.random() * 100) + 1);
+        let kq6 = String(Math.floor(Math.random() * 100) + 1);
+        document.getElementById('kq1').value = kq1;
+        document.getElementById('kq2').value = kq2;
+        document.getElementById('kq3').value = kq3;
+        document.getElementById('kq4').value = kq4;
+        document.getElementById('kq5').value = kq5;
+        document.getElementById('kq6').value = kq6;
+        let so = [veso.so1, veso.so2, veso.so3, veso.so4, veso.so5, veso.so6];
+        let kq = [kq1, kq2, kq3, kq4, kq5, kq6];
+
+        /*for (let i = 0; i < so.length; i++) {
+            if (so[i] === kq[i])
+                dem1++;
         }
+        for (let i = 1; i < so.length; i++) {
+            if (so[i] === kq[i])
+                dem2++;
+        }
+        for (let i = 3; i < so.length; i++) {
+            if (so[i] === kq[i])
+                dem3++;
+        }*/
+        if (veso.so1 == kq1 || veso.so2 == kq2 || veso.so3 == kq3 || veso.so4 == kq4 || veso.so5 == kq5 || veso.so6 == kq6) {
+            alert('Chuc Mung Ban da dat giai nhat');
+        } else if (veso.so2 == kq2 || veso.so3 == kq3 || veso.so4 == kq4 || veso.so5 == kq5 || veso.so6 == kq6) {
+            alert('Chuc Mung Ban da dat giai nhi');
+        } else if (veso.so4 == kq4 || veso.so5 == kq5 || veso.so6 == kq6) {
+            alert('Chuc Mung Ban da dat giai ba');
+        } else alert('Chuc Ban May Man Lan sau ');
     }
 </script>
 </body>
