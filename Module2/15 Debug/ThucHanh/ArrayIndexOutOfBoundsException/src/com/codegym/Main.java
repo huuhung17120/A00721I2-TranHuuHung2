@@ -14,7 +14,7 @@ public class Main {
         int x = scaner.nextInt();
         try {
             System.out.println("Giá trị của phần tử có chỉ số " + x + " là " + arr[x]);
-        } catch (IllegalTriangleException e) {
+        } catch (IndexOutOfBoundsException  e) {
             System.err.println("Chỉ số vượt quá giới hạn của mảng");
         }
     }
