@@ -41,7 +41,7 @@ public class Main {
                 strones = "nine";
                 break;
         }
-        if (((num % 100) >= 10) && ((num % 100) < 20)) {
+        if ((tens >= 10) && (tens < 20)) {
             switch (tens) {
                 case 10:
                     strtens = "ten";
@@ -136,7 +136,7 @@ public class Main {
             }
         }
         if (tens >= 10 && tens < 20) {
-            System.out.println(strhundreds +  strtens + strones);
+            System.out.println(strhundreds +  strtens );
         } else
             System.out.println(strhundreds +  strtens +  strones);
     }
