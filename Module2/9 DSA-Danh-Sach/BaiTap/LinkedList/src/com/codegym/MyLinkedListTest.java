@@ -1,15 +1,55 @@
 package com.codegym;
 
+import java.util.LinkedList;
+
 public class MyLinkedListTest {
 
     public static void main(String[] args) {
-        MyLinkedList ll = new MyLinkedList(10);
-        ll.addFirst(11);
-        ll.addFirst(12);
-        ll.addFirst(13);
+        MyLinkedList<Integer> integerMyLinkedList = new MyLinkedList<>();
 
-        ll.add(4,9);
-        ll.add(4,9);
-        ll.printList();
+        LinkedList test = new LinkedList();
+        integerMyLinkedList.addFirst(1);
+        integerMyLinkedList.add(1, 2);
+        integerMyLinkedList.add(2, 3);
+        integerMyLinkedList.add(3, 4);
+        integerMyLinkedList.addLast(5);
+
+
+        System.out.println("Display linked list: ");
+        for (int i = 0; i < integerMyLinkedList.numNodes; i++) {
+            System.out.println("Node " + (i + 1) + ": " + integerMyLinkedList.get(i));
+        }
+        integerMyLinkedList.remove(3);
+        boolean checkValue = integerMyLinkedList.remove((Integer) 2);
+        MyLinkedList<Integer> myLinkedListClone = new MyLinkedList<>();
+        myLinkedListClone = integerMyLinkedList.clone();
+        System.out.println("Display linked list clone: ");
+        for (int i = 0; i < myLinkedListClone.numNodes; i++) {
+            System.out.println("Node " + (i + 1) + ": " + myLinkedListClone.get(i));
+        }
+
+/*        final int FIVE = 5;
+        if (integerMyLinkedList.contains(FIVE)) {
+            System.out.println("Linked list contains " + FIVE);
+        } else {
+            System.out.println("Linked list do not contains " + FIVE);
+        }*/
+
+        final int FIVE = 5;
+        int indexOfFive = integerMyLinkedList.indexOf(FIVE);
+        if (indexOfFive >= 0) {
+            System.out.println("Index of " + FIVE + " is " + indexOfFive);
+        } else {
+            System.out.println("Linked list has not " + FIVE);
+        }
+
+        System.out.println("Data of first node " + integerMyLinkedList.getFirst());
+        System.out.println("Data of last node " + integerMyLinkedList.getLast());
+
+        integerMyLinkedList.clear();
+        System.out.println("Display linked list: ");
+        for (int i = 0; i < integerMyLinkedList.numNodes; i++) {
+            System.out.println("Node " + (i + 1) + ": " + integerMyLinkedList.get(i));
+        }
     }
 }

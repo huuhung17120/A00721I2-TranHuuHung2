@@ -2,13 +2,46 @@ package com.codegym;
 
 public class MyListTest {
     public static void main(String[] args) {
-        MyList<Integer> list = new MyList<>();
-        list.add(2);
-        list.add(6);
-        list.add(9);
-        System.out.println("Danh sach integer da nhap la: ");
-        for (int i = 0; i < list.size(); i++) {
-            System.out.println(list.get(i));
+        MyList<Integer> integerMyList = new MyList<>();
+        integerMyList.add(1);
+        integerMyList.add(1, 17);
+        integerMyList.add(2, 1);
+
+        System.out.println("\nDisplay array list: ");
+        for (int i = 0; i < integerMyList.size; i++) {
+            System.out.println(integerMyList.get(i));
+        }
+
+        integerMyList.remove(2);
+        System.out.println("\nArray list after remove: ");
+        for (int i = 0; i < integerMyList.size; i++) {
+            System.out.println(integerMyList.get(i));
+        }
+
+/*        if (integerMyList.contains(3)) {
+            System.out.println("\nArray list is contains 3");
+        } else {
+            System.out.println("\nArray list is not contains 3");
+        }*/
+
+/*        int checkIndexOf = integerMyList.indexOf(5);
+        if (checkIndexOf >= 0) {
+            System.out.println("Index of 5 is " + checkIndexOf);
+        } else {
+            System.out.println("Array list is not contains 5");
+        }*/
+
+/*        integerMyList.clear();
+        System.out.println("\nArray list after clear: ");
+        for (int i = 0; i < integerMyList.size; i++) {
+            System.out.println(integerMyList.get(i));
+        }*/
+
+        MyList<Integer> myListClone = new MyList<>();
+        myListClone = integerMyList.clone();
+        System.out.println("\nDisplay array list clone: ");
+        for (int i = 0; i < myListClone.size; i++) {
+            System.out.println(myListClone.get(i));
         }
     }
 }
